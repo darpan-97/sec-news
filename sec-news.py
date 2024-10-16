@@ -105,7 +105,7 @@ def write_results_to_md(articles, file_path):
         
 # Example usage
 file_path = destination  # Use the downloaded CSV file
-results_file_path = 'sec-news.md'  # Output file for results
+results_file_path = 'README.md'  # Output file for results
 feed_links = fetch_rss_links_from_csv(file_path)
 
 if isinstance(feed_links, list) and feed_links:
