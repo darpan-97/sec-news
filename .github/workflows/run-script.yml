@@ -24,4 +24,17 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run the script
-        run: python sec-news.py  # Replace this with your actual script name, e.g., `fetch_articles.py`
+        run: python sec-news.py  # Replace with your actual script name
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "your_email@example.com"  # Replace with your email
+          git config --local user.name "GitHub Actions"  # You can name it anything
+          git add sec-news.md  # Add the output file (replace with your actual output file)
+          git commit -m "Update articles published on $(date '+%Y-%m-%d')" || echo "No changes to commit"
+
+      - name: Push changes
+        run: |
+          git push origin main  # Push changes to the main branch (adjust if your default branch is different)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides a token for authentication
