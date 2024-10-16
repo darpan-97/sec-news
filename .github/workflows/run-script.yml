@@ -28,9 +28,9 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --local user.email "your_email@example.com"  # Replace with your email
+          git config --local user.email "darpankatarya@gmail.com"  # Replace with your email
           git config --local user.name "GitHub Actions"  # You can name it anything
-          git add sec-news.md  # Add the output file (replace with your actual output file)
+          git add README.md  # Add the output file (replace with your actual output file)
           git commit -m "Update articles published on $(date '+%Y-%m-%d')" || echo "No changes to commit"
 
       - name: Push changes
