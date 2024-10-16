@@ -34,5 +34,5 @@ jobs:
 
       - name: Push changes
         run: |
-          git remote set-url origin https://<your_github_username>:${{ secrets.MY_PAT }}@github.com/darpan-97/sec-news.git
+          git remote set-url origin https://darpan-97:${{ secrets.MY_PAT }}@github.com/darpan-97/sec-news.git
           git push origin main
